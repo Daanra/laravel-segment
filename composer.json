@@ -1,10 +1,10 @@
 {
-    "name": "slashequip/laravel-segment",
+    "name": "daanra/laravel-segment",
     "description": "Laravel Segment is an opinionated, approach to integrating Segment into your Laravel application.",
     "keywords": [
         "laravel-segment"
     ],
-    "homepage": "https://github.com/slashequip/laravel-segment",
+    "homepage": "https://github.com/Daanra/laravel-segment",
     "license": "MIT",
     "authors": [
         {
