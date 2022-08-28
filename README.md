@@ -15,7 +15,7 @@ Laravel Segment is an opinionated, approach to integrating Segment into your Lar
 You can install the package via composer:
 
 ```bash
-composer require slashequip/laravel-segment
+composer require daanra/laravel-segment
 ```
 
 
