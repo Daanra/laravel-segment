@@ -108,7 +108,7 @@ class SegmentService
         $data = [
             'type' => $payload->getType()->getValue(),
             'userId' => $payload->getUserId(),
-            'timestamp' => $payload->getTimestamp()->format('Y-m-d\TH:i:s\Z'),
+            'timestamp' => now()->toIso8601String(),
         ];
 
         // This is important, Segment will not handle empty
