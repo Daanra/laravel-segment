@@ -61,6 +61,18 @@ class SegmentService
             new SimpleSegmentIdentify($this->globalUser, $identifyData)
         );
     }
+    
+    public function alias(string $userId, string $previousId): void
+    {
+        Http::withHeaders([
+            'Authorization' => 'Bearer '.base64_encode($this->getWriteKey()),
+            'Content-Type' => 'application/json',
+        ])->post('https://api.segment.io/v1/alias', [
+            'timestamp' => now()->toIso8601String(),
+            'userId' => $userId,
+            'previousId' => $previousId,
+        ])->throw();
+    }
 
     public function forUser(CanBeIdentifiedForSegment $user): PendingUserSegment
     {
