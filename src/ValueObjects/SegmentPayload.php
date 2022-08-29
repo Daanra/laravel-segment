@@ -55,6 +55,12 @@ class SegmentPayload
     {
         $this->groupId = $groupId;
     }
+    
+        
+    public function getGroupId(): string
+    {
+        return $this->groupId;
+    }
 
     public function getTimestamp(): DateTime
     {
