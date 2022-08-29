@@ -29,7 +29,12 @@ class SegmentService
     {
         $this->globalUser = $globalUser;
     }
-
+    
+    public function getGlobalUser(): CanBeIdentifiedForSegment
+    {
+        return $this->globalUser;
+    }
+    
     public function setGlobalContext(array $globalContext): void
     {
         $this->globalContext = $globalContext;
