@@ -122,9 +122,14 @@ class SegmentService
             $data[$payload->getDataKey()] = $payload->getData();
         }
 
-        // If it's a tracking call we need an event name!
+        // If it's a tracking call we need an event name
         if ($payload->getType()->equals(SegmentPayloadType::TRACK())) {
             $data['event'] = $payload->getEvent();
+        }
+        
+        // If it's a group call we need a group id
+        if ($payload->getType()->equals(SegmentPayloadType::GROUP())) {
+            $data['groupId'] = $payload->getGroupId();
         }
 
         return $data;
