@@ -46,6 +46,14 @@ class SegmentService
             new SimpleSegmentEvent($this->globalUser, $event, $eventData)
         );
     }
+    
+        
+    public function group(string $groupId, ?array $traits = null): void
+    {
+        $this->push(
+            new SimpleSegmentGroup($this->globalUser, $groupId, $traits)
+        );
+    }
 
     public function identify(?array $identifyData = null): void
     {
