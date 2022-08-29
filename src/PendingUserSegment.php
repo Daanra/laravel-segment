@@ -22,6 +22,13 @@ class PendingUserSegment
             new SimpleSegmentEvent($this->user, $event, $eventData)
         );
     }
+        
+    public function group(string $groupId, ?array $traits = null): void
+    {
+        $this->service->push(
+            new SimpleSegmentGroup($this->user, $groupId, $traits)
+        );
+    }
 
     public function identify(?array $identifyData = null): void
     {
