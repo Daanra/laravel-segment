@@ -12,6 +12,8 @@ use SlashEquip\LaravelSegment\SegmentService;
  * @method static void setGlobalUser(CanBeIdentifiedForSegment $globalUser)
  * @method static void setGlobalContext(?array $globalContext)
  * @method static void track(string $event, ?array $eventData = null)
+ * @method static void group(string $groupId, ?array $traits = null)
+ * @method static void alias(string $userId, string $previousId)
  * @method static void identify(?array $identifyData = null)
  * @method static PendingUserSegment forUser(CanBeIdentifiedForSegment $user)
  * @method static void push(CanBeSentToSegment $segment)
