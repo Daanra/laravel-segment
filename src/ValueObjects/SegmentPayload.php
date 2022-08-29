@@ -12,6 +12,9 @@ class SegmentPayload
 {
     /** @var string */
     protected $event;
+    
+    /** @var string */
+    protected $groupId;
 
     /** @var DateTime */
     protected $timestamp;
@@ -46,6 +49,11 @@ class SegmentPayload
     public function setEvent(string $event): void
     {
         $this->event = $event;
+    }
+    
+    public function setGroupId(string $groupId): void
+    {
+        $this->groupId = $groupId;
     }
 
     public function getTimestamp(): DateTime
