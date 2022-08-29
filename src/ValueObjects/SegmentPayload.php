@@ -67,7 +67,7 @@ class SegmentPayload
             return 'properties';
         }
 
-        if ($this->type->equals(SegmentPayloadType::IDENTIFY())) {
+        if ($this->type->equals(SegmentPayloadType::IDENTIFY()) || $this->type->equals(SegmentPayloadType::GROUP())) {
             return 'traits';
         }
 
